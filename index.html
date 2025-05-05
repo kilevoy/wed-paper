@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Stationery Pinterest Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+  <style>
+    /* Pinterest-inspired masonry layout */
+    .masonry-grid {
+      column-count: 5;
+      column-gap: 16px;
+    }
+    
+    @media (max-width: 1400px) {
+      .masonry-grid { column-count: 4; }
+    }
+    
+    @media (max-width: 1200px) {
+      .masonry-grid { column-count: 3; }
+    }
+    
+    @media (max-width: 768px) {
+      .masonry-grid { column-count: 2; }
+    }
+    
+    @media (max-width: 500px) {
+      .masonry-grid { column-count: 1; }
+    }
+    
+    .pin-item {
+      break-inside: avoid;
+      margin-bottom: 16px;
+    }
+    
+    .pin-item:hover .pin-overlay {
+      opacity: 1;
+    }
+    
+    .pin-overlay {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    /* Pinterest hover buttons */
+    .pin-button {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .save-button {
+      background-color: #e60023;
+    }
+    
+    /* Font styling */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    }
+    
+    /* 9:16 aspect ratio for images */
+    .aspect-9-16 {
+      position: relative;
+      padding-bottom: 177.78%; /* 16/9 * 100% */
+      height: 0;
+      overflow: hidden;
+    }
+    
+    .aspect-9-16 img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <div class="text-red-600 font-bold text-2xl mr-2">W</div>
+        <h1 class="font-bold text-lg">Wedding Stationery Pins</h1>
+      </div>
+      
+      <div class="flex items-center space-x-3">
+        <div class="relative">
+          <input type="text" id="search-input" placeholder="Search wedding stationery pins..." 
+                 class="bg-gray-100 px-4 py-2 rounded-full w-64 focus:outline-none focus:ring-2 focus:ring-red-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-3 top-2.5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <button class="bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-full">Create</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content - Pinterest Style Masonry Grid -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Optional Category Title -->
+    <h2 class="text-center font-bold text-2xl mb-8">Wedding Invitations & Stationery Collection</h2>
+    
+    <!-- Pinterest-style Masonry Layout -->
+    <div id="pins-container" class="masonry-grid">
+      <!-- Pins will be loaded dynamically here -->
+      <div class="loading text-center py-8">
+        <svg class="animate-spin h-8 w-8 mx-auto text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <p class="mt-2 text-gray-600">Loading wedding stationery pins...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pin Template -->
+  <template id="pin-template">
+    <div class="pin-item relative rounded-lg overflow-hidden bg-white">
+      <div class="aspect-9-16">
+        <img src="" alt="" class="pin-image">
+      </div>
+      <div class="pin-overlay absolute inset-0 bg-black bg-opacity-20 flex flex-col justify-between p-3">
+        <div class="flex justify-end">
+          <button class="pin-button p-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex justify-end">
+          <a href="#" class="pin-link save-button text-white font-medium px-4 py-2 rounded-full">Save</a>
+        </div>
+      </div>
+      <div class="p-3 bg-white">
+        <h3 class="pin-title font-medium mb-1"></h3>
+        <p class="pin-description text-sm text-gray-600"></p>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to fetch the catalog data
+      async function fetchCatalog() {
+        try {
+          const response = await fetch('catalog.json');
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return await response.json();
+        } catch (error) {
+          console.error('Error fetching catalog:', error);
+          document.querySelector('.loading').innerHTML = '<p class="text-red-600">Error loading pins. Please try again later.</p>';
+          return { items: [] };
+        }
+      }
+
+      // Function to create a pin element from template
+      function createPinElement(item) {
+        const template = document.getElementById('pin-template');
+        const pinElement = template.content.cloneNode(true);
+        
+        // Set image source and alt text
+        const img = pinElement.querySelector('.pin-image');
+        img.src = item.image;
+        img.alt = item.title;
+        
+        // Set title and description
+        pinElement.querySelector('.pin-title').textContent = item.title;
+        pinElement.querySelector('.pin-description').textContent = item.description;
+        
+        // Set link
+        pinElement.querySelector('.pin-link').href = item.link;
+        
+        return pinElement;
+      }
+
+      // Function to render pins
+      async function renderPins() {
+        const container = document.getElementById('pins-container');
+        const catalog = await fetchCatalog();
+        
+        // Remove loading indicator
+        const loading = document.querySelector('.loading');
+        if (loading) {
+          loading.remove();
+        }
+        
+        // Add pins to the container
+        catalog.items.forEach(item => {
+          const pinElement = createPinElement(item);
+          container.appendChild(pinElement);
+        });
+        
+        // Initialize search functionality
+        initSearch(catalog.items);
+      }
+
+      // Function to initialize search
+      function initSearch(items) {
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', function() {
+          const searchTerm = this.value.toLowerCase();
+          const container = document.getElementById('pins-container');
+          
+          // Clear container
+          container.innerHTML = '';
+          
+          // Filter and add matching pins
+          const filteredItems = items.filter(item => 
+            item.title.toLowerCase().includes(searchTerm) || 
+            item.description.toLowerCase().includes(searchTerm)
+          );
+          
+          if (filteredItems.length === 0) {
+            const noResults = document.createElement('div');
+            noResults.className = 'col-span-full text-center py-8';
+            noResults.innerHTML = '<p class="text-gray-600">No matching wedding stationery found.</p>';
+            container.appendChild(noResults);
+          } else {
+            filteredItems.forEach(item => {
+              const pinElement = createPinElement(item);
+              container.appendChild(pinElement);
+            });
+          }
+        });
+      }
+
+      // Start loading pins
+      renderPins();
+    });
+  </script>
+</body>
+</html>
