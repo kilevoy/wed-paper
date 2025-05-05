@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "id": "item_001",
+      "title": "Elegant Floral Wedding Invitation Suite",
+      "description": "Watercolor flowers with gold foil details",
+      "image": "wedding_invitation_floral_001.jpg",
+      "link": "https://your-website.com/products/elegant-floral-suite"
+    },
+    {
+      "id": "item_002",
+      "title": "Minimalist Save the Date Card",
+      "description": "Clean typography on premium paper",
+      "image": "save_the_date_minimal_002.jpg",
+      "link": "https://your-website.com/products/minimalist-savethedate"
+    },
+    {
+      "id": "item_003",
+      "title": "Rustic Kraft Paper Wedding Suite",
+      "description": "Eco-friendly materials with botanical illustrations",
+      "image": "rustic_wedding_suite_003.jpg",
+      "link": "https://your-website.com/products/rustic-kraft-suite"
+    },
+    {
+      "id": "item_004",
+      "title": "Handwritten Calligraphy Place Cards",
+      "description": "Elegant personalized touch for your reception",
+      "image": "calligraphy_place_cards_004.jpg",
+      "link": "https://your-website.com/products/calligraphy-placecards"
+    },
+    {
+      "id": "item_005",
+      "title": "Botanical Wedding Menu Cards",
+      "description": "Vintage-inspired illustrations on textured paper",
+      "image": "botanical_menu_cards_005.jpg",
+      "link": "https://your-website.com/products/botanical-menu"
+    },
+    {
+      "id": "item_006",
+      "title": "Geometric Modern Invitation Suite",
+      "description": "Bold patterns with rose gold foil accents",
+      "image": "geometric_modern_suite_006.jpg",
+      "link": "https://your-website.com/products/geometric-modern-suite"
+    },
+    {
+      "id": "item_007",
+      "title": "Personalized Thank You Cards",
+      "description": "With your wedding photos and custom message",
+      "image": "thank_you_cards_007.jpg",
+      "link": "https://your-website.com/products/personalized-thankyou"
+    },
+    {
+      "id": "item_008",
+      "title": "Watercolor Envelope Liners",
+      "description": "Custom painted details for your invitations",
+      "image": "watercolor_envelope_liners_008.jpg",
+      "link": "https://your-website.com/products/watercolor-liners"
+    },
+    {
+      "id": "item_009",
+      "title": "Custom Wax Seals",
+      "description": "Personalized with your monogram or design",
+      "image": "custom_wax_seals_009.jpg",
+      "link": "https://your-website.com/products/custom-wax-seals"
+    },
+    {
+      "id": "item_010",
+      "title": "Illustrated Wedding Programs",
+      "description": "Custom timeline and ceremony details",
+      "image": "wedding_programs_010.jpg",
+      "link": "https://your-website.com/products/illustrated-programs"
+    },
+    {
+      "id": "item_011",
+      "title": "Acrylic Wedding Invitations",
+      "description": "Modern transparent design with gold lettering",
+      "image": "acrylic_invitations_011.jpg",
+      "link": "https://your-website.com/products/acrylic-invitations"
+    },
+    {
+      "id": "item_012",
+      "title": "Calligraphy Envelope Addressing",
+      "description": "Professional hand-lettering for your guest addresses",
+      "image": "envelope_addressing_012.jpg",
+      "link": "https://your-website.com/products/envelope-addressing"
+    },
+    {
+      "id": "item_013",
+      "title": "Custom Seating Chart Display",
+      "description": "Elegant design to help guests find their tables",
+      "image": "seating_chart_013.jpg",
+      "link": "https://your-website.com/products/seating-chart"
+    },
+    {
+      "id": "item_014",
+      "title": "Hand-Painted Welcome Sign",
+      "description": "Custom welcome message for your ceremony or reception",
+      "image": "welcome_sign_014.jpg",
+      "link": "https://your-website.com/products/welcome-sign"
+    },
+    {
+      "id": "item_015",
+      "title": "Acrylic Table Numbers",
+      "description": "Modern transparent design with gold paint details",
+      "image": "table_numbers_015.jpg",
+      "link": "https://your-website.com/products/acrylic-table-numbers"
+    },
+    {
+      "id": "item_016",
+      "title": "Personalized Vow Books",
+      "description": "Handmade leather books to capture your promises",
+      "image": "vow_books_016.jpg",
+      "link": "https://your-website.com/products/vow-books"
+    },
+    {
+      "id": "item_017",
+      "title": "Custom Wedding Monogram",
+      "description": "Bespoke design for all your wedding stationery",
+      "image": "wedding_monogram_017.jpg",
+      "link": "https://your-website.com/products/custom-monogram"
+    },
+    {
+      "id": "item_018",
+      "title": "Letterpress RSVP Cards",
+      "description": "Luxurious texture with debossed details",
+      "image": "rsvp_cards_018.jpg",
+      "link": "https://your-website.com/products/letterpress-rsvp"
+    }
+  ]
+}
